@@ -1,0 +1,26 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    /* add border around each choice*/
+    border: 0.1rem solid rgba(86, 165, 235, 0.25);
+    /*changes answer option background to white*/
+    background-color: white;
+}
+/*apply same hover effect as on home/landing page*/
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86,185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+/*add padding to answer options*/
+.choice-prefix{
+    padding: 1.5rem 2.5rem;
+    background-color: #56a5eb;
+    color: white;
+}
+.choice-text{
+    padding: 1.5rem;
+}
