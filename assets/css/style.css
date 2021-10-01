@@ -1,0 +1,229 @@
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      box-sizing: border-box;
+    } 
+  
+  :root{
+    --primary: #fff ;
+    --secondary: rgb(0, 0, 0) ; 
+    --yellowgreen: rgb(154,205,50);
+    --green: rgb(134,139,34);
+    --grey: rgb(184, 178, 178);
+     font-size: 62.5%;
+    }
+  
+  body { 
+    background-color: var(--primary);
+  }
+    
+    li {
+        padding-bottom: 10px;
+        color: var(--yellowgreen);
+        font-size: 2rem;
+        list-style-type: none;
+        margin: 10px 0px;
+        
+    }
+    
+    h1 {
+      color: var(--secondary);
+      margin-bottom: 5px;
+      font-size: 4.5rem;
+      text-align: center;
+    }
+    
+    h2 {
+      color: var(--secondary);
+      text-align: center;
+      font-size: 2rem;
+      font-weight: lighter;
+      margin: 35px 10px 35px 10px;
+    }
+    
+    input {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 4px;
+        width: 50%;
+    }
+  
+    .enter-input {
+      color: var(--secondary);
+      text-align: center;
+      font-size: 2rem;
+      font-weight: lighter;
+      margin: 1px;
+    }
+    
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 80rem;
+        margin: 0 auto;
+      }
+    
+      button {
+        display: grid;
+        text-align: center;
+        background-color: var(--yellowgreen);
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        color: var(--primary);
+        font-size: 2rem;
+        padding: 10px 15px;
+        width: 300px;
+        margin-top: 3px;
+      }
+    
+      button:hover{
+        background-color: var(--green);
+        cursor: pointer;
+    }
+   
+    button:active {
+       box-shadow: var(--green);
+     }
+    
+    #startpage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #timer {
+    
+        background-color: var(--grey);
+        color: var(--primary);
+        font-size: x-large;
+        text-align: center;
+    }
+  
+    #quiz {
+        display: none;
+    }
+    
+    #result {
+        display: none;
+    }
+    
+    #gameover {
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #highScore{
+        height: 1.5rem;
+        border: groove 2px;
+    }
+  
+    .scores-title {
+      color: var(--secondary);
+      margin-bottom: 10px;
+      margin-top: 80px;
+      font-size: 4.5rem;
+      font-weight: bold;
+    }
+    
+    #high-scorePage{
+        display: none;
+        width: 50%;
+        border: none;
+        background: var(--primary);
+  
+    }
+    
+    #highscore-header{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: .5rem;
+        background-color: var(--grey);
+        color: var(--primary);
+        font-weight: lighter;
+        font-size: 1.5rem;
+    }
+  
+    .highscore-list {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+    }
+  
+    #highscoreContainer {
+        height: 100%;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #initials {
+        margin: 1rem;
+    }
+    
+    #highscore-initials{
+        padding-left: 9.5rem;
+        font-weight: bold;
+    }
+    
+    #highscore-score{
+        float: right;
+        padding-right: 8.75rem;
+        font-weight: bold;
+    }
+    
+    #finalScore{
+        padding-bottom: 0.5rem;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    
+    #endGameBtns{
+        display: none;
+    }
+  
+    .end-btn {
+        gap: 10px;
+    }
+  
+    /* content style end */
+  
+    /* media queries */
+    @media screen and (max-width: 980px) {
+      h1 {
+          flex: 1 80%;
+          text-align: center;
+      }
+  
+      h2 {
+        flex: 1 80%;
+        text-align: center;
+    }
+    
+      main {
+        width: 100%;
+        flex-basis: 100%;
+      }
+  
+      @media screen and (max-width: 575px) {
+      .end-btn {
+         gap: 10px;
+         display: flex;
+         flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .highscore-list {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+      }
+   }
+  }

@@ -1,61 +1,63 @@
 
+var resultsEl = document.getElementById("result");
 
-var timer = document.getElementById("second")
+var gameoverDiv = document.getElementById("gameover");
 
-var timeDisplay = document.getElementById("counter")
+var quizBody = document.getElementById("quiz");
 
-var startBtn = document.getElementById("startBtn")
+var questionsEl = document.getElementById("questions");
 
-var questionDiv = document.getElementById("question")
+var finalScoreEl = document.getElementById("finalScore");
 
-var answerBtn1 = document.getElementById("answer1")
+var quizTimer = document.getElementById("timer");
 
-var answerBtn2 = document.getElementById("answer2")
+var startQuizButton = document.getElementById("startbtn");
 
-var answerBtn3 = document.getElementById("answer3")
+var startQuizDiv = document.getElementById("startpage");
 
-var answerBtn4 = document.getElementById("answer4")
+var highscoreContainer = document.getElementById("highscoreContainer");
 
-var title = document.getElementById("pageTitle")
+var highscoreDiv = document.getElementById("high-scorePage");
 
-var feedback = document.getElementById("response")
+var highscoreDisplayName = document.getElementById("highscore-initials");
 
-var questionNum = 0
+var highscoreInputName = document.getElementById("initials");
 
-var timeLeft = 0
+var endGameBtns = document.getElementById("endGameBtns");
 
-var quizTime = 0
+var submitScoreBtn = document.getElementById("submitScore");
 
-var score = 0
+var highscoreDisplayScore = document.getElementById("highscore-score");
+
+var buttonA = document.getElementById("a");
+
+var buttonB = document.getElementById("b");
+
+var buttonC = document.getElementById("c");
+
+var buttonD = document.getElementById("d");
 
 // Questions 
 var quizQuestions = [{
     question:"Inside which HTML element do we put the JavaScript?",
-    choiceA: "<scripting",
-    choiceB: "<js>",
-    choiceC: "<script>",
-    choiceD: "<javascript>",
+    choiceA: "scripting",
+    choiceB: "js",
+    choiceC: "script",
+    choiceD: "javascript",
     correctAnswer: "c"},
   {
-    question: "What is the correct JavaScript syntax to change the content of the HTML element between the following tags <p id='demo'>This is a demonstration.</p>",
-    choiceA: " document.getElementByName('p').innerHTML = 'Hello World!' ",
-    choiceB: "document.getElementById('demo').innerHTML = 'Hello World!'",
-    choiceC: " document.getElementBy('p').innerHTML = 'Hello World!'",
-    choiceD: "#demo.innerHTML = 'Hello World!'",
-    correctAnswer: "b"},
-   {
     question: "Where is the correct place to insert a JavaScript?",
-    choiceA: "The <head> section",
-    choiceB: "Both the <head> section and the <body> section are correct",
-    choiceC: "The <body> section",
+    choiceA: "The 'head' section",
+    choiceB: "Both the 'head' section and the 'body' section are correct",
+    choiceC: "The 'body' section",
     choiceD: "you can't insert it in an html page",
     correctAnswer: "b"},
     {
     question: "What is the correct syntax for referring to an external script called 'xxx.js' ",
-    choiceA: "<script href='xxx.js'> ",
-    choiceB: "<script name=xxx.js'>",
-    choiceC: "<script src='xxx.js'>",
-    choiceD: "<script title='xxx.js'>",
+    choiceA: "script href='xxx.js' ",
+    choiceB: "script name=xxx.js' ",
+    choiceC: "script src='xxx.js' ",
+    choiceD: "script title='xxx.js' ",
     correctAnswer: "a"},
     {
     question: "How do you create a function in JavaScript?",
@@ -64,14 +66,21 @@ var quizQuestions = [{
     choiceC: "function myFunction()",
     choiceD: "Create myFunction()",
     correctAnswer: "c"},  
+    {
+    question: "What is the correct way to debug a javascript file in a repo",
+    choiceA: "Close your computer and try again tomorrow",
+    choiceB: "Delete the repo from your computer and repull the clean code",
+    choiceC: "Ask God for help",
+    choiceD: "Look to see what errors show up in your terminal and take time fixing each error",
+    correctAnswer: "c"},
     ];
 
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
-var count = 76;
+var count = 60;
 var timerInterval;
 var score = 0;
-var penalty = 10;
+var penalty = 5;
 var correct;
 
 // Generate a question with answers
@@ -186,6 +195,7 @@ function replayQuiz(){
     score = 0;
     currentQuestionIndex = 0;
 }
+
 
 // Check if the answer is correct or incorrect
 function checkAnswer(answer){
