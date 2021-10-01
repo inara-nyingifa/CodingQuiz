@@ -94,7 +94,7 @@
         flex-direction: column;
         align-items: center;
     }
-    
+    /*styles for questions pg*/
     #timer {
     
         background-color: var(--grey);
@@ -117,7 +117,7 @@
         flex-direction: column;
         align-items: center;
     }
-    
+    /*styles for score board*/
     #highScore{
         height: 1.5rem;
         border: groove 2px;
@@ -192,9 +192,6 @@
     .end-btn {
         gap: 10px;
     }
-  
-    /* content style end */
-  
     /* media queries */
     @media screen and (max-width: 980px) {
       h1 {
@@ -219,7 +216,6 @@
          flex-wrap: wrap;
         justify-content: center;
       }
-      
       .highscore-list {
         display: flex;
         justify-content: center;
